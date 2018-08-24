@@ -1,8 +1,12 @@
-<?php$access_token = 'XXXXXXXXXXXXXXXXXXXXXXX';
-// Get POST body content$content = file_get_contents('php://input');
-// Parse JSON$events = json_decode($content, true);
-// Validate parsed JSON dataif (!is_null($events['events'])) {	
-// Loop through each event foreach ($events['events'] as $event) {	
+<?php$access_token = 'XVSK9QiC9d43KAac7o7re6BUGaVftgtNqmCygK0esKMNShPZT11d5uefBnffkUHDuR9vuwrY8kPvOBM82VlTd3daGTzC6HH6/6i9D+6kAIMG8R+Yw3wTKan0Bnp1boqxYhOU86QkJUzGi0T0/XecfgdB04t89/1O/w1cDnyilFU=';
+// Get POST body 
+content$content = file_get_contents('php://input');
+// Parse 
+JSON$events = json_decode($content, true);
+// Validate parsed 
+JSON dataif (!is_null($events['events'])) {	
+// Loop through each event 
+  foreach ($events['events'] as $event) {	
 // Reply only when message sent is in 'text' format	
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {	
 // Get text sent			
